@@ -35,15 +35,15 @@ def set_location():
         column_first = GPSinfo.query.first()
 
         gpsinfo = GPSinfo()
-        gpsinfo.gps_x = float(gps_data["Latitude"])
-        gpsinfo.gps_y = float(gps_data["Longitude"])
+        gpsinfo.gps_x = float(gps_data["people_float"])
+        gpsinfo.gps_y = float(gps_data["people_float"])
         gpsinfo.date = datetime.datetime.now()
 
-        x = float(gps_data["Latitude"])
-        y = float(gps_data["Longitude"])
-        if x != 0.0 or y != 0.0:
-            db_session.add(gpsinfo)
-            db_session.commit()
+        x = float(gps_data["people_float"])
+        y = float(gps_data["people_float"])
+  
+        db_session.add(gpsinfo)
+        db_session.commit()
 
 
     return render_template("location.html", info=gps_data, all_column=all_column)
