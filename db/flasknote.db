@@ -1,0 +1,7 @@
+create table entries (
+  id integer primary key autoincrement,
+  title text not null,
+  body text not null
+);
+insert into entries (title, body) values ("First message", "Hello world.");
+insert into entries (title, body) values ("Second message", "Hello Japan.");

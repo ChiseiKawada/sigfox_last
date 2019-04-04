@@ -1,0 +1,5 @@
+<h1>{{ info }}</h1>
+
+{% for column in all_column %}
+    <li>{{ column.gps_x}}, {{ column.gps_y }}, {{ column.date }}</li>
+{% endfor %}
