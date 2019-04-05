@@ -46,7 +46,7 @@ def set_location():
         db_session.commit()
 
 
-    return render_template("location.html", info=gps_data, all_column=all_column)
+    return render_template("top.html", info=gps_data, all_column=all_column)
 
 @app.route("/getInfo", methods=["GET", "POST"])
 def get_info():
