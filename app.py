@@ -22,7 +22,7 @@ def main():
 
 
 #sigfoxから受信したデータをDBに格納する（x, y, time）
-@app.route("/location", methods=["GET", "POST"])
+@app.route("/top", methods=["GET", "POST"])
 def set_location():
 
     gps_data = []
